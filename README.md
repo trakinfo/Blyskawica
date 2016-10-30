@@ -1,0 +1,2 @@
+# Blyskawica
+Generator testów szkolnych
