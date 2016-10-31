@@ -1,4 +1,4 @@
-# Blyskawica
+﻿# Błyskawica
 Generator testów szkolnych
 
 Program Błyskawica.NET jest przeznaczony do generowania i przeprowadzania testów wiedzy teoretycznej. Można w nim budować testy jednokrotnego i wielokrotnego wyboru.
