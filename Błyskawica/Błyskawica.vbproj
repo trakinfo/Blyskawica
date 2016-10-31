@@ -1,0 +1,489 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{461EEEF1-D4CE-44A7-A6B5-70AF27165E52}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Błyskawica.My.MyApplication</StartupObject>
+    <RootNamespace>Błyskawica</RootNamespace>
+    <AssemblyName>Błyskawica.NET</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>On</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <ApplicationIcon>piorun.ico</ApplicationIcon>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Błyskawica.NET.xml</DocumentationFile>
+    <NoWarn>
+    </NoWarn>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Błyskawica.NET.xml</DocumentationFile>
+    <NoWarn>
+    </NoWarn>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ListviewWithTooltip, Version=1.0.839.39742, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Install\Support\ListviewWithTooltip.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.3.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Install\Support\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="MySql.Data.MySqlClient" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutBlyskawica.Designer.vb">
+      <DependentUpon>AboutBlyskawica.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AboutBlyskawica.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common.vb" />
+    <Compile Include="dlgAnswer.Designer.vb">
+      <DependentUpon>dlgAnswer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgAnswer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgAnswersByQuestion.Designer.vb">
+      <DependentUpon>dlgAnswersByQuestion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgAnswersByQuestion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgChangePassword.Designer.vb">
+      <DependentUpon>dlgChangePassword.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgChangePassword.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgConnect.Designer.vb">
+      <DependentUpon>dlgConnect.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgConnect.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgImportStudent.Designer.vb">
+      <DependentUpon>dlgImportStudent.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgImportStudent.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgKlasa.Designer.vb">
+      <DependentUpon>dlgKlasa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgKlasa.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgKryteria.Designer.vb">
+      <DependentUpon>dlgKryteria.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgKryteria.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgKryterium.Designer.vb">
+      <DependentUpon>dlgKryterium.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgKryterium.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgLogin.Designer.vb">
+      <DependentUpon>dlgLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgModul.Designer.vb">
+      <DependentUpon>dlgModul.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgModul.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgOpenTest.Designer.vb">
+      <DependentUpon>dlgOpenTest.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgOpenTest.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgPassword.Designer.vb">
+      <DependentUpon>dlgPassword.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgPassword.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgPermission.Designer.vb">
+      <DependentUpon>dlgPermission.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgPermission.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgPrintPreview.Designer.vb">
+      <DependentUpon>dlgPrintPreview.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgPrintPreview.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgPrivilege.Designer.vb">
+      <DependentUpon>dlgPrivilege.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgPrivilege.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgPrzedmiot.Designer.vb">
+      <DependentUpon>dlgPrzedmiot.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgPrzedmiot.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgQuestion.Designer.vb">
+      <DependentUpon>dlgQuestion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgQuestion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgStudent.Designer.vb">
+      <DependentUpon>dlgStudent.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgStudent.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgTest.Designer.vb">
+      <DependentUpon>dlgTest.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgTest.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgTestQuestion.Designer.vb">
+      <DependentUpon>dlgTestQuestion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgTestQuestion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgUser.Designer.vb">
+      <DependentUpon>dlgUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgWersja.Designer.vb">
+      <DependentUpon>dlgWersja.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgWersja.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBelfer.Designer.vb">
+      <DependentUpon>frmBelfer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmBelfer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKryteria.Designer.vb">
+      <DependentUpon>frmKryteria.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmKryteria.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.vb">
+      <DependentUpon>frmMain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPozwolenie.Designer.vb">
+      <DependentUpon>frmPozwolenie.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPozwolenie.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrawa.Designer.vb">
+      <DependentUpon>frmPrawa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrawa.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrzedmiot.Designer.vb">
+      <DependentUpon>frmPrzedmiot.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrzedmiot.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRejestrPytan.Designer.vb">
+      <DependentUpon>frmRejestrPytan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmRejestrPytan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRejestrTestow.Designer.vb">
+      <DependentUpon>frmRejestrTestow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmRejestrTestow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStudent.Designer.vb">
+      <DependentUpon>frmStudent.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmStudent.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWyniki.Designer.vb">
+      <DependentUpon>frmWyniki.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmWyniki.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Import.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="PrintReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PrintVariables.vb" />
+    <Compile Include="prnPrintScore.Designer.vb">
+      <DependentUpon>prnPrintScore.vb</DependentUpon>
+    </Compile>
+    <Compile Include="prnPrintScore.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SharedVariables.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AboutBlyskawica.resx">
+      <DependentUpon>AboutBlyskawica.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgAnswer.resx">
+      <DependentUpon>dlgAnswer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgAnswersByQuestion.resx">
+      <DependentUpon>dlgAnswersByQuestion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgChangePassword.resx">
+      <DependentUpon>dlgChangePassword.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgConnect.resx">
+      <DependentUpon>dlgConnect.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgImportStudent.resx">
+      <DependentUpon>dlgImportStudent.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgKlasa.resx">
+      <DependentUpon>dlgKlasa.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgKryteria.resx">
+      <DependentUpon>dlgKryteria.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgKryterium.resx">
+      <DependentUpon>dlgKryterium.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgLogin.resx">
+      <DependentUpon>dlgLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgModul.resx">
+      <DependentUpon>dlgModul.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgOpenTest.resx">
+      <DependentUpon>dlgOpenTest.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgPassword.resx">
+      <DependentUpon>dlgPassword.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgPermission.resx">
+      <DependentUpon>dlgPermission.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgPrintPreview.resx">
+      <DependentUpon>dlgPrintPreview.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgPrivilege.resx">
+      <DependentUpon>dlgPrivilege.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgPrzedmiot.resx">
+      <DependentUpon>dlgPrzedmiot.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgQuestion.resx">
+      <DependentUpon>dlgQuestion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgStudent.resx">
+      <DependentUpon>dlgStudent.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgTest.resx">
+      <DependentUpon>dlgTest.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgTestQuestion.resx">
+      <DependentUpon>dlgTestQuestion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgUser.resx">
+      <DependentUpon>dlgUser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgWersja.resx">
+      <DependentUpon>dlgWersja.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBelfer.resx">
+      <DependentUpon>frmBelfer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKryteria.resx">
+      <DependentUpon>frmKryteria.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPozwolenie.resx">
+      <DependentUpon>frmPozwolenie.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrawa.resx">
+      <DependentUpon>frmPrawa.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrzedmiot.resx">
+      <DependentUpon>frmPrzedmiot.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRejestrPytan.resx">
+      <DependentUpon>frmRejestrPytan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRejestrTestow.resx">
+      <DependentUpon>frmRejestrTestow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStudent.resx">
+      <DependentUpon>frmStudent.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWyniki.resx">
+      <DependentUpon>frmWyniki.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="prnPrintScore.resx">
+      <DependentUpon>prnPrintScore.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="piorun.ico" />
+    <None Include="Resources\arrow-up_32.png" />
+    <None Include="Resources\arrow-down_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
